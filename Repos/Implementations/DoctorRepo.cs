@@ -1,10 +1,9 @@
-using System.Reflection.Metadata.Ecma335;
 using hospital.Data;
 using hospital.Models;
-using hospital.Repos.Interface;
+using hospital.Repos.Interface.Doc;
 using Microsoft.EntityFrameworkCore;
 
-namespace hospital.Repo.Implement
+namespace hospital.Repo.Implement.Doc
 {
     public class DoctorRepo : IDoctorRepo
     {

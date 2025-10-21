@@ -1,6 +1,6 @@
 using hospital.Models;
 
-namespace hospital.Repos.Interface
+namespace hospital.Repos.Interface.Doc
 {
     public interface IDoctorRepo
     {
