@@ -1,4 +1,6 @@
 using hospital.Data;
+using hospital.Repo.Implement.Rep;
+using hospital.Repos.Interface.Per;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,7 @@ options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IPrescriptionRepo, PrescriptionRepo>();
 
 
 var app = builder.Build();
