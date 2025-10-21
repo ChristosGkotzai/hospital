@@ -1,6 +1,8 @@
 using hospital.Data;
 using hospital.Repo.Implement.Rep;
 using hospital.Repos.Interface.Per;
+using hospital.Repos.Interface.Doc;
+using hospital.Repo.Implement.Doc;
 using hospital.Services.Implement.Doc;
 using hospital.Services.Implement.IDocService;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPrescriptionRepo, PrescriptionRepo>();
 builder.Services.AddScoped<IDoctorService,DoctorService>();
-
+builder.Services.AddScoped<IDoctorRepo, DoctorRepo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
