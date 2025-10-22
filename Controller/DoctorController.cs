@@ -45,5 +45,11 @@ namespace hospital.Controllers
             var newDoc = await _doctorService.Add(doctor);
             return CreatedAtAction(nameof(GetById), new { id = newDoc.Id }, newDoc);
         }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Doctor>>> GetAll()
+        {
+            var doctors = await _doctorService.GetAll();
+            return Ok(doctors);
+        }
     }
 }

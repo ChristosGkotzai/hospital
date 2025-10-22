@@ -18,6 +18,7 @@ namespace hospital.Services.Implement.Doc
         }
         public async Task<Doctor?> GetById(int id)
         {
+
             return await _doctorRepo.GetById(id);
         }
         public async Task<Doctor> Add(Doctor doctor)

@@ -8,6 +8,9 @@ namespace hospital.Services.Implement.IDocService
         Task<Doctor?> GetById(int id);
         Task<Doctor> Add(Doctor doctor);
         Task <Doctor?>Update(int id,Doctor updatedDoctor);
-        Task <bool> Delete(int id);
+        Task<bool> Delete(int id);
+        
+        
+
     }
 }
