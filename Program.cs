@@ -6,6 +6,10 @@ using hospital.Repo.Implement.Doc;
 using hospital.Services.Implement.Doc;
 using hospital.Services.Implement.IDocService;
 using Microsoft.EntityFrameworkCore;
+using hospital.Services.Interface.IPatientService;
+using hospital.Services.Implement.Pat;
+using hospital.Repos.Interface.Pat;
+using hospital.Repo.Implement.Pat;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +20,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IPrescriptionRepo, PrescriptionRepo>();
-builder.Services.AddScoped<IDoctorService,DoctorService>();
+builder.Services.AddScoped<IDoctorService, DoctorService>();
+builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IPatientRepo, PatientRepo>();
 builder.Services.AddScoped<IDoctorRepo, DoctorRepo>();
 var app = builder.Build();
 
