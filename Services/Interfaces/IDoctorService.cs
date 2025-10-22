@@ -10,7 +10,5 @@ namespace hospital.Services.Implement.IDocService
         Task <Doctor?>Update(int id,Doctor updatedDoctor);
         Task<bool> Delete(int id);
         
-        
-
     }
 }
